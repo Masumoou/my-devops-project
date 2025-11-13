@@ -20,6 +20,8 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         script: |
           cd /var/www/html
-          sudo git clone https://github.com/Masumoou/my-devops-project.git temp || (cd temp && sudo git pull)
+          sudo rm -rf temp
+          sudo git clone https://github.com/Masumoou/my-devops-project.git temp
           sudo cp -r temp/* .
           sudo rm -rf temp
+          sudo systemctl reload nginx
