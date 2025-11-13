@@ -1,2 +1,24 @@
-<h1>🚀 Version 2.0 - Auto Deploy Works!</h1>
-<p>This updated automatically when I pushed to GitHub!</p>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My DevOps Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 50px;
+        }
+        h1 { font-size: 3em; }
+    </style>
+</head>
+<body>
+    <h1>🚀 Auto-Deploy SUCCESS!</h1>
+    <p>This was automatically deployed using GitHub Actions!</p>
+    <p><strong>Version 2.0</strong> - Updated at: <span id="time"></span></p>
+    <script>
+        document.getElementById('time').innerHTML = new Date().toLocaleString();
+    </script>
+</body>
+</html>
